@@ -100,7 +100,9 @@ int main(void)
                    /* USER CODE END 2 */
   Display_Init();
 
-  lv_example_get_started_1();
+  lv_example_anim_2();
+
+
   //ST7789S_Init();
   //ST7789S_FillArea(0, 0, 320, 240, 0xF8E3);
   /* Infinite loop */
@@ -108,9 +110,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  HAL_Delay(3);
-
-	  lv_timer_handler();
+	  lv_timer_periodic_handler();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
