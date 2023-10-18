@@ -100,7 +100,9 @@ int main(void)
                    /* USER CODE END 2 */
   Display_Init();
 
-  //lv_example_get_started_2();
+  lv_example_get_started_1();
+  //ST7789S_Init();
+  //ST7789S_FillArea(0, 0, 320, 240, 0xF8E3);
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)

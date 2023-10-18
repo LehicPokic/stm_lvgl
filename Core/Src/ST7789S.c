@@ -17,15 +17,23 @@ static lv_color_t buf[320 * 240];
 
 void LVGL_flush(lv_disp_t * disp, const lv_area_t * area, lv_color_t * buf){
 	{
+		ST7789S_FlushArea(area->x1, area->y1, area->x2, area->y2, buf);
+		/*ST7789S_SetArea(area->x1, area->y1, area->x2, area->y2);
+		LcdWriteComm(0x2C);
+		for (int i = 0; i < (area->x2 - area->x1 + 1) * (area->y2 - area->y1 + 1); i++)
+		{
+		    LcdWriteData(buf);
+		    buf++;
+		}*/
 
-	    int32_t x, y;
+	    /*int32_t x, y;
 	    for(y = area->y1; y <= area->y2; y++) {
 	        for(x = area->x1; x <= area->x2; x++) {
 	        	//put_px(x, y, *buf);
 	        	ST7789S_PutPixel(x, y, buf);
 	            buf++;
 	        }
-	    }
+	    }*/
 
 	    /* IMPORTANT!!!
 	     * Inform LVGL that you are ready with the flushing and buf is not used anymore*/
@@ -56,6 +64,8 @@ static void WriteSequence(int count, ...)
 
 void ST7789S_Init()
 {
+
+
     LcdDelay(100);
 
     LcdResetPinWrite(false);
@@ -114,8 +124,10 @@ void ST7789S_Init()
     LcdWriteData(0x02); // PWMON
     LcdWriteComm(0xCC);
     LcdWriteData(0x15); // 5kHz PWM
-
     LcdWriteComm(0x29); // DISPON
+
+
+
 }
 
 void ST7789S_SetBrightness(uint8_t _value)
