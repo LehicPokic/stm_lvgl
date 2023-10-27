@@ -1,6 +1,8 @@
 #include "ST7789S_driver.h"
 
 #include "stm32f4xx.h"
+#include "stm32f4xx_hal_gpio.h"
+#include "stm32f4xx_hal.h"
 
 #include <stdarg.h>
 #include <stdint.h>

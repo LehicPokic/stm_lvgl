@@ -30,6 +30,7 @@ extern "C" {
 #include "stm32f4xx_hal.h"
 #include "../../lv_conf.h"
 #include "../../lvgl/src/lvgl.h"
+#include "../../lvgl/examples/lv_examples.h"
 #include "ST7789S.h"
 #include "ST7789S_driver.h"
 /* Private includes ----------------------------------------------------------*/

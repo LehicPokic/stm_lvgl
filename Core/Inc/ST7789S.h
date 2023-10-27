@@ -17,7 +17,7 @@ void ST7789S_FillArea(uint16_t _x1, uint16_t _y1, uint16_t _x2, uint16_t _y2, ui
 void ST7789S_FlushArea(uint16_t _x1, uint16_t _y1, uint16_t _x2, uint16_t _y2, uint16_t* _data);
 void ST7789S_PutPixel(uint16_t _x, uint16_t _y, uint16_t *_data);
 void LVGL_flush(lv_disp_t * disp, const lv_area_t * area, lv_color_t * color_p);
-void Display_init();
+void Display_Init();
 
 
 #ifdef __cplusplus

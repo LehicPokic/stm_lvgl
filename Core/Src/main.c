@@ -17,6 +17,7 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
+
 #include "main.h"
 #include "ST7789S.h"
 #include "ST7789S_driver.h"
@@ -99,8 +100,9 @@ int main(void)
 
                    /* USER CODE END 2 */
   Display_Init();
-
-  lv_example_anim_2();
+  //ST7789S_Init();
+  //ST7789S_FillArea(100, 100, 200, 200, 0x97E9);
+  lv_example_get_started_1();
 
 
   //ST7789S_Init();
