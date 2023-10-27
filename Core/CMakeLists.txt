@@ -42,6 +42,7 @@ add_executable(${PROJECT_NAME}
 
 target_link_options(${PROJECT_NAME} PRIVATE -T${CMAKE_SOURCE_DIR}/STM32F413.ld)
 
+
 link_directories(
       ${CMAKE_SOURCE_DIR}/lvgl
       ${CMAKE_SOURCE_DIR}/lvgl/examples)
@@ -49,6 +50,9 @@ link_directories(
 target_link_libraries(${PROJECT_NAME} lvgl lvgl_examples)
 
 
+set(LV_CONF_PATH
+        ${CMAKE_SOURCE_DIR}/lv_conf.h
+        CACHE STRING "" FORCE)
 
 
 
